@@ -17,6 +17,56 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblRota: UILabel!
     @IBOutlet weak var meuStepper: UIStepper!
     
+    @IBAction func escolherRota(_ sender: Any) {
+        // mensagem, botoes, exibicao - Assim e composta uma mensagem
+        let alerta = UIAlertController(
+            title: "Forma para receber a rota do veiculo",
+            message: "Faça sua escolha",
+            preferredStyle: UIAlertController.Style.actionSheet)
+        alerta.addAction(UIAlertAction(
+            title: "SMS",
+            style: UIAlertAction.Style.default,
+            handler: { (action) in
+                self.lblRota.text = action.title
+        }))
+        alerta.addAction(UIAlertAction(
+            title: "E-mail",
+            style: UIAlertAction.Style.default,
+            handler: { (action) in
+                self.lblRota.text = action.title
+        }))
+        alerta.addAction(UIAlertAction(
+            title: "Cancelar",
+            style: UIAlertAction.Style.cancel,
+            handler: nil
+        ))
+        
+        present(alerta, animated: true, completion: nil)
+    }
+    
+    //Stepper
+    @IBAction func stepperValueChanged(_ sender: Any) {
+        lblAno.text = "\(Int(meuStepper.value))" //Fazendo cast do cast para ficar como inteiro
+        print(lblAno.text)
+    }
+    
+    //Slider
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        lblKm.text = "\(Int(sender.value))"
+        print(lblKm.text);
+    }
+    
+    
+    @IBAction func switchValueChanged(_ sender: UISwitch) {
+        if (sender.isOn) {
+            print("Restreamento ativado")
+        } else {
+            print("Restreamento desativado")
+        }
+    }
+    
+    
+    //Segmented Control
     @IBAction func indexChanged(_ sender: Any) {
         switch (meuSegmento.selectedSegmentIndex) {
         case 0:
@@ -28,7 +78,7 @@ class ViewController: UIViewController {
         case 2:
             print("Você escolheu o \(meuSegmento.titleForSegment(at: 2)!)");
         default:
-            <#code#>
+            break
         }
     }
     override func viewDidLoad() {
