@@ -22,6 +22,7 @@
 		ACE42375225EA2180015A9AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACE42378225EA2180015A9AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACE4237A225EA2180015A9AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACE42380225EA2700015A9AA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +39,7 @@
 		ACE42362225EA2160015A9AA = {
 			isa = PBXGroup;
 			children = (
+				ACE42380225EA2700015A9AA /* README.md */,
 				ACE4236D225EA2160015A9AA /* aula-09 */,
 				ACE4236C225EA2160015A9AA /* Products */,
 			);
